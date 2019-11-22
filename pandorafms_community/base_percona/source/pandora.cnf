@@ -1,0 +1,27 @@
+# copy this file to /etc/my.cnf.d/pandora.cnf directory inside the container to set the onfiguration
+[mysqld]
+max_allowed_packet = 64M
+innodb_buffer_pool_size = 400M
+innodb_lock_wait_timeout = 90
+innodb_file_per_table
+innodb_flush_log_at_trx_commit = 0
+innodb_flush_method = O_DIRECT
+innodb_log_file_size = 64M
+innodb_log_buffer_size = 16M
+innodb_io_capacity = 100
+thread_cache_size = 8
+thread_stack    = 256K
+max_connections = 100
+
+key_buffer_size=4M
+read_buffer_size=128K
+read_rnd_buffer_size=128K
+sort_buffer_size=128K
+join_buffer_size=4M
+
+query_cache_type = 1
+query_cache_size = 64M
+query_cache_min_res_unit = 2k
+query_cache_limit = 256K
+
+sql_mode=""

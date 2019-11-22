@@ -1,0 +1,6 @@
+docker run --name pandora-percona \
+-e MYSQL_ROOT_PASSWORD=pandora \
+-e MYSQL_DATABASE=pandora \
+-e MYSQL_USER=pandora \
+-e MYSQL_PASSWORD=pandora \
+-d percona_pandora_base
