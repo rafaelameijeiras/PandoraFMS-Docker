@@ -2,7 +2,7 @@
 FROM centos:7
 
 RUN { \
-        # echo '[artica_pandorafms]'; \
+        echo '[artica_pandorafms]'; \
         echo 'name=CentOS7 - PandoraFMS official repo'; \
         echo 'baseurl=http://firefly.artica.es/centos7'; \
         echo 'gpgcheck=0'; \
@@ -95,11 +95,12 @@ RUN yum install -y --setopt=tsflags=nodocs \
 
 # Install server
 
+RUN yum install -y http://www6.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/wmi-1.3.14-4.el7.art.x86_64.rpm --setopt=tsflags=nodocs
+
 RUN yum install -y --setopt=tsflags=nodocs \
 	vim \
 	fping \
 	nmap \
-	wmic \
 	perl-IO-Compress \
 	nmap \
 	sudo \
