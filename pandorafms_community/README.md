@@ -25,3 +25,5 @@ docker run --name Pandora_new --rm \
 -e INSTANCE_NAME=pandora201 \
 -ti projectsartica/projects_demos:server_734
 ```
+
+Under construction.
