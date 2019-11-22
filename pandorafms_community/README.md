@@ -10,7 +10,7 @@ docker run --name Pandora_new %container_name% --rm \
 -e DBPASS=%Mysql_pass% \
 -e DBPORT=%Mysql_port% \
 -e INSTANCE_NAME=%server name% \
--ti projectsartica/projects_demos:server_734
+-ti rameijeiras/pandorafms-community
 ```
 Example:
 ```
@@ -23,7 +23,7 @@ docker run --name Pandora_new --rm \
 -e DBPASS=pandora \
 -e DBPORT=3306 \
 -e INSTANCE_NAME=pandora201 \
--ti projectsartica/projects_demos:server_734
+-ti rameijeiras/pandorafms-community
 ```
 
 ### Integrated database for PandoraFMS container
@@ -57,6 +57,5 @@ docker run --name Pandora_new --rm \
 -e INSTANCE_NAME=pandora_inst \
 -ti rameijeiras/pandorafms-community
 ```
-
 
 Under construction.
