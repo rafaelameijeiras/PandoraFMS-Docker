@@ -1,0 +1,10 @@
+docker run --name pandora_community --rm \
+-p 8085:80 \
+-p 41121:41121 \
+-e DBHOST=mysqlhost.local \
+-e DBNAME=pandora \
+-e DBUSER=pandora \
+-e DBPASS=pandora \
+-e DBPORT=3306 \
+-e INSTANCE_NAME=pandora_community \
+-ti rameijeiras/pandorafms-community:740
