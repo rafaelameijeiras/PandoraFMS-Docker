@@ -1,2 +1,2 @@
 # PandoraFMS
-Testing environmet for Pandora FMS tests
+Testing env for Pandora FMS 
