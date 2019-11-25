@@ -190,8 +190,8 @@ while true ; do wget -q -O - --no-check-certificate http://localhost/pandora_con
 
 # Enable cron
 echo  ">> Enable pandora_db cron: "
-/usr/perl/pandora_server/util/pandora_db.pl /etc/pandora/pandora_server.conf
-while true ; do sleep 1h && /usr/bin/pandora_db /etc/pandora/pandora_server.conf; done &
+/usr/share/pandora_server/util/pandora_db.pl /etc/pandora/pandora_server.conf
+while true ; do sleep 1h && /usr/share/pandora_server/util/pandora_db.pl /etc/pandora/pandora_server.conf; done &
 
 # Check and launch server
 echo  ">> Starting server: " Check and launch server
