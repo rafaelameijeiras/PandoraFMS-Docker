@@ -16,7 +16,7 @@ RUN	rm -rf /etc/localtime ; ln -s /usr/share/zoneinfo/Europe/Madrid /etc/localti
 
 RUN wget https://downloads.sourceforge.net/project/pandora/Tools%20and%20dependencies%20%28All%20versions%29/DEB%20Debian%2C%20Ubuntu/phantomjs ; \
 	chmod +x phantomjs; \
-	ln -s phantomjs /usr/bin/
+	ln -s /tmp/phantomjs /usr/bin/
 
 COPY  sources/ /tmp
 # Install phantomjs
