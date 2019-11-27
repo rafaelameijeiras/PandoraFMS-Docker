@@ -1,4 +1,4 @@
-#docker build -t projectsartica/projects_demos:server_<vwrsion> .
+#docker build -trameijeiras/pandorafms-community:<ver> .
 FROM rameijeiras/pandorafms-base 
 
 ENV DBNAME=pandora
