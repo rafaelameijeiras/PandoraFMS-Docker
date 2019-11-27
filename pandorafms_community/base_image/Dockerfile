@@ -1,4 +1,4 @@
-#docker build -t projectsartica/projects_demos:server_base
+#docker build -t rameijeiras/pandorafms-base .
 FROM centos:7
 
 RUN { \
