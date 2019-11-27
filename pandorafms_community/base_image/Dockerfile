@@ -12,7 +12,7 @@ RUN { \
 RUN yum install -y --setopt=tsflags=nodocs \
 	https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
 	http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
-	yum-utils
+	yum-utils ; yum clean all
 
 RUN yum-config-manager --enable remi-php72
 
@@ -91,11 +91,11 @@ RUN yum install -y --setopt=tsflags=nodocs \
 	pixman \
 	xorg-x11-fonts-75dpi \
 	xorg-x11-fonts-misc \
-	poppler-data 
+	poppler-data ; yum clean all
 
 # Install server
 
-RUN yum install -y http://www6.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/wmi-1.3.14-4.el7.art.x86_64.rpm --setopt=tsflags=nodocs
+RUN yum install -y http://www6.atomicorp.com/channels/atomic/centos/7/x86_64/RPMS/wmi-1.3.14-4.el7.art.x86_64.rpm --setopt=tsflags=nodocs; yum clean all
 
 RUN yum install -y --setopt=tsflags=nodocs \
 	vim \
