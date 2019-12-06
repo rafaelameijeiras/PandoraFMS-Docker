@@ -30,6 +30,7 @@ RUN yum install -y --setopt=tsflags=nodocs \
 	php-mbstring \
 	php-pecl-zip \
 	php-xmlrpc \
+	php-yaml \
 	libxslt \
 	wget \
 	php-xml \
