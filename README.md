@@ -32,11 +32,11 @@ There is a preconfigured database image in this repo to connect the Pandora envi
 Example:
 ```
 docker run --name Pandora_DB \
--p 3308:3306 \
+-p 3306:3306 \
 -e MYSQL_ROOT_PASSWORD=pandora \
--e MYSQL_DATABASE: pandora \
--e MYSQL_USER: pandora \
--e MYSQL_PASSWORD: pandora \
+-e MYSQL_DATABASE=pandora \
+-e MYSQL_USER=pandora \
+-e MYSQL_PASSWORD=pandora \
 -d rameijeiras/pandorafms-percona-base
 ```
 
