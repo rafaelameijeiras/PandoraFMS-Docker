@@ -22,8 +22,8 @@ COPY  sources/ /tmp
 # Install phantomjs
 RUN chmod +x /tmp/run_pandora.sh 
 
-RUN yum install -y https://downloads.sourceforge.net/project/pandora/Pandora%20FMS%207.0NG/742/RHEL_CentOS/pandorafms_console-7.0NG.742-1.noarch.rpm?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fpandora%2Ffiles%2FPandora%2520FMS%25207.0NG%2F740%2FRHEL_CentOS%2Fpandorafms_console-7.0NG.742-1.noarch.rpm; \ 
-	yum install -y https://downloads.sourceforge.net/project/pandora/Pandora%20FMS%207.0NG/742/RHEL_CentOS/pandorafms_server-7.0NG.742-1.noarch.rpm; \
+RUN yum install -y https://downloads.sourceforge.net/project/pandora/Pandora%20FMS%207.0NG/744/RHEL_CentOS/pandorafms_console-7.0NG.744.noarch.rpm?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fpandora%2Ffiles%2FPandora%2520FMS%25207.0NG%2F740%2FRHEL_CentOS%2Fpandorafms_console-7.0NG.744noarch.rpm; \ 
+	yum install -y https://downloads.sourceforge.net/project/pandora/Pandora%20FMS%207.0NG/744/RHEL_CentOS/pandorafms_server-7.0NG.744.noarch.rpm; \
 	yum clean all
 
 EXPOSE 80 443 41121 162/udp
