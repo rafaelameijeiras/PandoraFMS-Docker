@@ -58,4 +58,48 @@ docker run --name Pandora_new --rm \
 -ti rameijeiras/pandorafms-community
 ```
 
-Under construction.
+### Docker Compose Stack
+
+if you want to run an easy to deploy stack you may use the docker-compose.yml file
+
+```
+version: '3.1'
+services:
+  db:
+    image: rameijeiras/pandorafms-percona-base
+    restart: always
+    command: ["mysqld", "--innodb-buffer-pool-size=300M"] 
+    environment:
+      MYSQL_ROOT_PASSWORD: pandora
+      MYSQL_DATABASE: pandora
+      MYSQL_USER: pandora
+      MYSQL_PASSWORD: pandora
+    networks:
+     - pandora
+
+  pandora:
+    image: rameijeiras/pandorafms-community
+    restart: always
+    depends_on:
+      - db
+    environment:
+      MYSQL_ROOT_PASSWORD: pandora
+      DBHOST: db
+      DBNAME: pandora
+      DBUSER: pandora
+      DBPASS: pandora
+      DBPORT: 3306
+      INSTANCE_NAME: pandora01
+      SLEEP: 5
+      RETRIES: 3
+    networks:
+     - pandora
+    ports:
+      - "8080:80"
+      - "41121:41121"
+      - "162:162/udp"
+
+networks:
+  pandora:
+```
+just by running: `docker-compose -f PandoraFMS/pandorafms_community/docker-compose.yml up`
