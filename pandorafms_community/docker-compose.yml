@@ -27,8 +27,10 @@ services:
       DBPASS: pandora
       DBPORT: 3306
       INSTANCE_NAME: pandora01
-      SLEEP: 5
-      RETRIES: 3
+      SLEEP: 10
+      RETRIES: 5
+    volumes:
+      - mysql:/var/lib/mysql
     networks:
      - pandora
     ports:
