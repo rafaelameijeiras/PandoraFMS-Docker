@@ -1,6 +1,12 @@
 # Note
 
-The dockerfiles and procedure are still viables, but we migrate the project to the official PandoraFMS repository: https://github.com/pandorafms/pandorafms/tree/develop/extras/docker/centos8
+The dockerfiles images and procedure are still viables, but wont by more updates on this repo. We migrate the project to the official PandoraFMS repository 
+
+Github: https://github.com/pandorafms/pandorafms/tree/develop/extras/docker/centos8
+
+
+Dockerhub: https://hub.docker.com/r/pandorafms/pandorafms-open-stack-el8
+
 
 # Pandora FMS
 
